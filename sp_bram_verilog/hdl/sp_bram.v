@@ -1,4 +1,5 @@
 // project     : sp_bram
+// version     : 1.1
 // date        : 22.04.2026
 // author      : siarhei baldzenka
 // e-mail      : sbaldzenka@proton.me
@@ -9,7 +10,8 @@
 module sp_bram
 #(
     parameter ADDR_WIDTH = 4,
-    parameter DATA_WIDTH = 8
+    parameter DATA_WIDTH = 8,
+    parameter MEM_FILE   = ""
 )
 (
     // global signal
@@ -23,6 +25,10 @@ module sp_bram
 
     // signals
     reg [DATA_WIDTH-1:0] mem [2**ADDR_WIDTH-1:0];
+
+    initial begin
+        $readmemh (MEM_FILE, mem);
+    end
 
     // MEMORY MANAGEMENT
     always@(posedge i_clk) begin
