@@ -1,8 +1,9 @@
--- project     : sp_bram
+-- project     : sp_bram_verilog
+-- version     : 1.0
 -- date        : 22.04.2026
 -- author      : siarhei baldzenka
 -- e-mail      : sbaldzenka@proton.me
--- description : https://github.com/sbaldzenka/sp_bram/sp_bram_verilog
+-- description : https://github.com/sbaldzenka/sp_bram
 
 vlib work
 vmap work work

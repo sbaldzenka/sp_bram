@@ -14,3 +14,6 @@ Single port BRAM. VHDL and Verilog versions.
 
 :exclamation: To set the BRAM address width and data width, you must specify **ADDRESS_WIDTH** and **DATA_WIDTH** parameters
 in the top project file (**sp_bram.vhd** or **sp_bram.v**).
+
+:exclamation: The external file initializing the BRAM needs to be in bit vector form. External files in integer or hex format
+do not work.
