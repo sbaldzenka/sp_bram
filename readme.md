@@ -1,5 +1,7 @@
 # sp_bram
 
+> **version: 1.0**
+
 Single port BRAM. VHDL and Verilog versions.
 
 ### Catalogs structure:
