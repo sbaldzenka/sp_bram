@@ -1,6 +1,6 @@
 # sp_bram
 
-> **version: 1.0**
+> **version: 1.1**
 
 Single port BRAM. VHDL and Verilog versions.
 

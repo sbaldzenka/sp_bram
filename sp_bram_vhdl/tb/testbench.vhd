@@ -24,7 +24,7 @@
 -- ---------------------------------------------------------------------------------------
 --
 -- project     : sp_bram_vhdl
--- version     : 1.0
+-- version     : 1.1
 -- date        : 30.08.2024
 -- author      : siarhei baldzenka
 -- e-mail      : sbaldzenka@proton.me
@@ -38,7 +38,6 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 use ieee.math_real.all;
 use ieee.numeric_std.all;
-
 
 entity testbench is
 generic

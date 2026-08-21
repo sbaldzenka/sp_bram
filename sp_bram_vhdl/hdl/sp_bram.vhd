@@ -24,7 +24,7 @@
 -- ---------------------------------------------------------------------------------------
 --
 -- project     : sp_bram_vhdl
--- version     : 1.0
+-- version     : 1.1
 -- date        : 30.08.2024
 -- author      : siarhei baldzenka
 -- e-mail      : sbaldzenka@proton.me
@@ -68,10 +68,12 @@ architecture rtl of sp_bram is
         variable file_name_line : line;
         variable memory         : mem_array;
     begin
-        for index in mem_array'range loop
-            readline (init_mem_file, file_name_line);
-            read (file_name_line, memory(index));
-        end loop;
+        if (file_name /= "") then
+            for index in mem_array'range loop
+                readline (init_mem_file, file_name_line);
+                read (file_name_line, memory(index));
+            end loop;
+        end if;
 
         return memory;
     end function;

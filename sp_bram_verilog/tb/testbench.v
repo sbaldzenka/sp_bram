@@ -25,7 +25,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 ---------------------------------------------------------------------------------------
 
 project     : sp_bram_verilog
-version     : 1.0
+version     : 1.1
 date        : 22.04.2026
 author      : siarhei baldzenka
 e-mail      : sbaldzenka@proton.me
@@ -40,7 +40,8 @@ module testbench
 #(
     parameter SYS_CLK_PERIOD = 10.000, // 100 MHz
     parameter ADDR_WIDTH     = 4,
-    parameter DATA_WIDTH     = 8
+    parameter DATA_WIDTH     = 8,
+    parameter MEM_FILE       = "path_to_mem_file/file.mem"
 );
 
     //variables
@@ -88,6 +89,7 @@ module testbench
 
     defparam DUT_inst.ADDR_WIDTH = ADDR_WIDTH;
     defparam DUT_inst.DATA_WIDTH = DATA_WIDTH;
+    defparam DUT_inst.MEM_FILE   = MEM_FILE;
 
     sp_bram DUT_inst
     (

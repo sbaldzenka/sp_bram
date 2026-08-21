@@ -1,5 +1,5 @@
 -- project     : sp_bram_verilog
--- version     : 1.0
+-- version     : 1.1
 -- date        : 22.04.2026
 -- author      : siarhei baldzenka
 -- e-mail      : sbaldzenka@proton.me

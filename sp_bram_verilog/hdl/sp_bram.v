@@ -25,7 +25,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SO
 ---------------------------------------------------------------------------------------
 
 project     : sp_bram_verilog
-version     : 1.0
+version     : 1.1
 date        : 22.04.2026
 author      : siarhei baldzenka
 e-mail      : sbaldzenka@proton.me
@@ -55,12 +55,15 @@ module sp_bram
     // signals
     reg [DATA_WIDTH-1:0] mem [2**ADDR_WIDTH-1:0];
 
+    // load init memory file
     initial begin
-        $readmemh (MEM_FILE, mem);
+        if (MEM_FILE != "") begin
+            $readmemb (MEM_FILE, mem);
+        end
     end
 
-    // MEMORY MANAGEMENT
-    always@(posedge i_clk) begin
+    // memory management
+    always @(posedge i_clk) begin
         if (i_we) begin
             mem[i_addr] <= i_data;
         end
